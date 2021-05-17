@@ -5,16 +5,6 @@ using UnityEngine;
 public class TargetController : MonoBehaviour
 {
     public GameManager.color color;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 
     private void OnTriggerEnter(Collider other)
@@ -27,12 +17,9 @@ public class TargetController : MonoBehaviour
         {
             if (trailCtrl.color == color)
             {
-                GameManager.instance.Win();
+                GameManager.instance.GoalReached();
             }
-            else
-            {
-                GameManager.instance.Loose();
-            }
+           
         }
     }
 }

@@ -5,6 +5,11 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public GameObject Target;
+
+    [SerializeField]
+    float limit;
+    [SerializeField]
+    float offset;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +21,8 @@ public class CameraController : MonoBehaviour
     {
         if (GameManager.instance.isGameOver)
             return;
-        Vector3 vect = new Vector3(transform.position.x, Target.transform.position.y, transform.position.z);
+        Vector3 vect = new Vector3(transform.position.x, Target.transform.position.y +offset, transform.position.z);
+        if(transform.position.y > limit - offset)
         this.transform.position = vect;
 
     }

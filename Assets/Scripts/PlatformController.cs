@@ -24,7 +24,7 @@ public class PlatformController : MonoBehaviour
         {
             if (!GameManager.instance.isGameOver)
             {
-                GameManager.instance.Loose();
+                GameManager.instance.EndGame();
             }
         }
     }

@@ -29,6 +29,11 @@ public class UiManager : MonoBehaviour
         SceneManager.LoadScene(GameManager.instance.CurrentLevel);
         
     }
+    public void Retry()
+    {
+        SceneManager.LoadScene(GameManager.instance.CurrentLevel);
+
+    }
     void Update()
     {
         
